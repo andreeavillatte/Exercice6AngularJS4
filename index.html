@@ -20,54 +20,61 @@
     </header>
     <!-- main -->
     <main>
-      <div class="card-deck mb-3">
-        <div class="card bg-primary">
-          <div class="card-body bg-warning">
-            <div class="card-text p-2 bg-primary test">
-              <h1 class="card-title font-weight-bolder text-center text-md-center">Exercice 6 <br>AngularJS<br> Partie 4</h1>
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">AngularJS Partie 4 Exercice 6 </h1>
+          <p class="lead">Faire une page HTML contenant deux
+            paragrahes et deux boutons. Au clic sur le premier uniquement le paragrahe 1 doit être visible. Au clic
+            sur le bouton deux, seulement le paragrahe 2 doit aparaître.</p>
+        </div>
+      </div>
+      <div ng-app>
+        <div class="row">
+          <div class="mb-2 col-12 offset-md-1 col-md-4">
+              <button type="button" class="btn btn-secondary shadow btn-lg" ng-click="mytext1=true ; mytext2=false">Montre
+                le première paragraphe</button>
+          </div>
+          <div class="mb-2 col-12 offset-md-1 col-md-4">
+              <button type="button" class="btn btn-secondary shadow btn-lg" ng-click="mytext1=false ; mytext2=true">Montre
+                le deuxième paragraphe</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="mb-2 col-12 offset-md-1 col-md-4 bg-primary text-justify test">
+            <div ng-show="mytext1" ng-init="mytext1=true">
+              <p><strong>Paragraphe 1 </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+                temporibus, illum quisquam quam error nihil
+                enim ab, molestias amet dolorum mollitia saepe facilis ducimus possimus maxime. Animi labore consequatur
+                placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quas quos odit, velit
+                adipisci
+                nesciunt quasi dicta, ea non mollitia eius architecto iusto delectus, corporis consequatur magni rem
+                numquam
+                nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum. Asperiores natus
+                deserunt
+                enim autem provident placeat quae. Quis officiis corrupti at perspiciatis eveniet expedita, obcaecati
+                numquam
+                nostrum neque quisquam.</p>
+            </div>
+          </div>
+          <div class="mb-2 col-12 offset-md-1 col-md-4 bg-danger text-justify test">
+            <div ng-show="mytext2" ng-init="mytext2=true">
+              <p><strong>Paragraphe 2 </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+                temporibus, illum quisquam quam error nihil
+                enim ab, molestias amet dolorum mollitia saepe facilis ducimus possimus maxime. Animi labore consequatur
+                placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quas quos odit, velit
+                adipisci
+                nesciunt quasi dicta, ea non mollitia eius architecto iusto delectus, corporis consequatur magni rem
+                numquam
+                nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum. Asperiores natus
+                deserunt
+                enim autem provident placeat quae. Quis officiis corrupti at perspiciatis eveniet expedita, obcaecati
+                numquam
+                nostrum neque quisquam.</p>
             </div>
           </div>
         </div>
-        <div class="card bg-warning">
-          <div class="card-body p-2 bg-success">
-            <p class="card-text p-4 d-flex offset-1 col-10 bg-primary test">Faire une page HTML contenant deux paragrahes et deux boutons. Au clic sur le premier uniquement le paragrahe 1 doit être visible. Au clic sur le bouton deux, seulement le paragrahe 2 doit aparaître.</p>
-          </div>
-        </div>
       </div>
-      <div class="card">
-        <div class="card-body p-2 bg-warning text-center">
-          <p class="card-text p-2 test ">Faire disparaitre et apparaitre en appuyant sur Show ou Hide </p>
-
-      </div>
-      <div ng-app >
-        <div class="row">
-          <div class="p-2 col-6 col-md-6 offset-3 text-center">
-              <button type="button" class="btn btn-primary btn-lg" ng-click="mytext1=true">Show Paragraphe 1</button>
-              <button type="button" class="btn btn-danger btn-lg" ng-click="mytext2=false">Hide Paragraphe 2</button>
-          </div>
-        </div>
-<div class="row">
-      <div class="mb-2 col-6 offset-md-1 col-md-4 bg-primary text-justify test" ng-show="mytext1" ng-init="mytext1=false">
-        <p><strong>Paragraphe 1 </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus, illum quisquam quam error nihil
-          enim ab, molestias amet dolorum mollitia saepe facilis ducimus possimus maxime. Animi labore consequatur
-          placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quas quos odit, velit adipisci
-          nesciunt quasi dicta, ea non mollitia eius architecto iusto delectus, corporis consequatur magni rem numquam
-          nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum. Asperiores natus deserunt
-          enim autem provident placeat quae. Quis officiis corrupti at perspiciatis eveniet expedita, obcaecati numquam
-          nostrum neque quisquam.</p>
-      </div>
-      <div class="mb-2 col-6 offset-md-1 col-md-4 bg-danger text-justify test" ng-show="mytext2" ng-init="mytext2=true">
-          <p><strong>Paragraphe 2 </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt temporibus, illum quisquam quam error nihil
-            enim ab, molestias amet dolorum mollitia saepe facilis ducimus possimus maxime. Animi labore consequatur
-            placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quas quos odit, velit adipisci
-            nesciunt quasi dicta, ea non mollitia eius architecto iusto delectus, corporis consequatur magni rem numquam
-            nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum. Asperiores natus deserunt
-            enim autem provident placeat quae. Quis officiis corrupti at perspiciatis eveniet expedita, obcaecati numquam
-            nostrum neque quisquam.</p>
-        </div>
-      </div>
-    </div>
-    </div>
     </main>
     <!-- footer -->
     <footer>
